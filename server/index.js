@@ -4,12 +4,13 @@ const cors = require('cors');
 const router = express.Router();
 const user = require('./user.js');
 const testApi = require('./test/testApi.js');
+const nesslerApi = require('./components/nessler/nessler.js');
 
 app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use('/v1/', user, testApi);
+app.use('/v1/', user, testApi, nesslerApi);
 
 // app.get('/', (req, res) => {
 //     res.json({
