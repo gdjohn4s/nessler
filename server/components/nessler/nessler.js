@@ -41,7 +41,7 @@ router.post('/addNessler', (req, res, err) => {
         };
 
         nessler
-            .insert(nessler)
+            .insert(newNessler)
             .then(createdNessler => {
                 res.json(createdNessler);
             }).catch(err);
