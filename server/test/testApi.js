@@ -4,7 +4,7 @@ require('dotenv').config();
 
 console.log(process.env.MONGO_URI);
 
-router.get('/testDotenv', (req, res) =>{
+router.get('/testDotenv', (req, res) => {
     res.json({
         URI: process.env.MONGO_URI
     })

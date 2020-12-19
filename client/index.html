@@ -1,34 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/node_modules/nes.css/css/nes.min.css">
-    <link rel="stylesheet" href="/node_modules/nes.css/css/nes.css">
-    <link rel="stylesheet" href="/client/css/style.css">
-    <!-- latest -->
-    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
-    <title>Nessler</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/client/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/client/css/bootstrap.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+  </script>
+
+  <title>Nessler - Write your nes</title>
 </head>
+
 <body>
-    <div class="nessler">
-        <div class="nes-container with-title is-centered">
-            <p class="title">Container.is-centered</p>
-            <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
-          </div>
-          
-          <div class="nes-container is-dark with-title">
-            <p class="title">Container.is-dark</p>
-            <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
-          </div>
-          
-          <div class="nes-container is-rounded">
-            <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
-          </div>
-          
-          <div class="nes-container is-rounded is-dark">
-            <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
-          </div>
+
+  <!-- NAVBAR -->
+  <!-- Image and text -->
+  <nav class="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="/client/icons-hero.png" alt="" width="30" height="24" class="d-inline-block align-top">
+        NESSLER
+      </a>
     </div>
+  </nav>
+
+  <div class="container-sm">
+    <!-- Content here -->
+    <form>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="/client/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
