@@ -2,8 +2,6 @@
 
 ### TODO:
 
-´´´
-
 ### Back-End 🖥
 
 - [*] Setup node environment (express, monk, Router)
@@ -18,5 +16,6 @@
 - [*] Setup the index page
 - [*] Select a framework
 - [*] Make a request to the addNessler API with a body from the user(JSON)
+- [] Resolve issue in POST request in fetch function
+- [] Get loading gif show up if a nessler is submitted
 - [] Setup the page to using the data from the server
-  ´´´
