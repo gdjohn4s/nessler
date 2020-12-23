@@ -11,8 +11,6 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-  <script type="text/javascript" src="index.js"></script>
-
   <title>Nessler - Write your nes</title>
 </head>
 
@@ -36,7 +34,7 @@
       <div class="col-sm-4 justify-content-around">
       </div>
       <div class="col-sm-4 justify-content-around">
-        <form>
+        <form class="nes-form" id="nes-form">
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Name</label>
             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Your Name">
@@ -44,7 +42,7 @@
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Nessler</label>
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            <button type="button" class="btn btn-primary mybtn" onclick="insertNessler()">
+            <button type="submit" class="btn btn-primary mybtn">
               <img src="https://img.icons8.com/color/96/000000/nintendo-entertainment-system.png" alt="" width="30"
                 height="24" class="d-inline-block align-top">
               Send Nessler
@@ -55,9 +53,30 @@
       <div class="col-sm-4 justify-content-around">
       </div>
     </div>
+  </div>
 
-    <!-- Content here -->
+  <!-- Nessler Body, show last nessler from people -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
 
+      </div>
+      <div class="col-sm-4 justify-content-around">
+        <div class="card mx-auto" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+
+      </div>
+    </div>
   </div>
 
   <!-- Bootstrap and my JS -->
@@ -66,6 +85,8 @@
     integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
   </script>
   <script type="text/javascript" src="/client/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+
 </body>
 
 </html>
