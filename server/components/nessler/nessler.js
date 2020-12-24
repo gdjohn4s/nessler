@@ -1,8 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const monk = require('monk');
+const cors = require('cors');
 
 require('dotenv').config();
+
+router.use(cors());
 
 // - Mongo Configuration
 // - It will connect to the mongo database and find nessler collection, if not found, it will created
@@ -17,7 +20,7 @@ router.use(function timeLog (req, res, next) {
   }) 
 
 // - Get all nesslers with a db find function
-router.get('/nessler', (req, res, next) => {
+router.get('/', (req, res, next) => {
     nessler
         .find()
         .then(nessler => {
