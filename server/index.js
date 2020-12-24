@@ -8,7 +8,7 @@ app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use('/v1/', user, nesslerApi);
+app.use('/v1/', nesslerApi);
 
 app.listen(3000, (err) => {
     console.log("Listening");
