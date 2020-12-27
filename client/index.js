@@ -2,6 +2,12 @@ const container = document.querySelector('.container');
 const form = document.querySelector('form'); // grabbing an element on the page
 const API_URL = "http://127.0.0.1:3000/v1/";
 
+// - Hide card and loading element
+const card = document.getElementById('card-nes');
+const loadingGif = document.getElementById('loading-nes');
+
+card.style.display = 'none';
+loadingGif.style.display = 'none';
 
 function getAllNes() {
     const card = document.querySelector('card');
@@ -13,8 +19,8 @@ function getAllNes() {
             console.log(nes);
         });
 
-    cardBody.innerHTML = <h1> PUCCHIACCA </h1>;
-        
+    // cardBody.innerHTML = <h1> PUCCHIACCA </h1>;
+
 }
 
 form.addEventListener('submit', (event) => {
@@ -30,9 +36,13 @@ form.addEventListener('submit', (event) => {
         nessler: message
     }
 
-    if (nameIn && message){
+    if (nameIn && message) {
         schema = JSON.stringify(schema);
-    
+        const form = document.getElementById('form-nes');
+
+        form.style.display = 'none';
+        loadingGif.style.display = '';
+
         fetch(`${API_URL}addNessler`, {
                 method: "POST",
                 headers: {
@@ -42,12 +52,15 @@ form.addEventListener('submit', (event) => {
                 body: schema
             })
             .then(function (res) {
+                form.style.display = '';
+                loadingGif.style.display = 'none';
                 return res.json();
             })
             .then(function (data) {
                 console.log(JSON.stringify(data))
             })
         console.log(schema);
+        getAllNes();
     } else {
         alert('Please insert the name or the message! Thanks')
     }
