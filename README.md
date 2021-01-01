@@ -18,5 +18,9 @@
 - [*] Make a request to the addNessler API with a body from the user(JSON)
 - [*] Resolve issue in POST request in fetch function
 - [*] Setup the page to using the data from the server
-- [] Get loading gif show up if a nessler is submitted
-- [] Hide form after submit and show up loading.gif
+- [*] Get loading gif show up if a nessler is submitted
+- [*] Hide form after submit and show up loading.gif
+
+
+## Completed for now
+Because i really don't like front-end developing, so if you want to create a nice UI for this little project, feel free to do it.
