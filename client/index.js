@@ -6,20 +6,28 @@ const API_URL = "http://127.0.0.1:3000/v1/";
 const card = document.getElementById('card-nes');
 const loadingGif = document.getElementById('loading-nes');
 
-card.style.display = 'none';
+card.style.display = '';
 loadingGif.style.display = 'none';
 
 function getAllNes() {
-    const card = document.querySelector('card');
-    const cardBody = document.querySelector('card-body');
+    const cardBody = document.getElementById('card-title');
+    const divClass = document.getElementById('div-class');
 
     fetch(`${API_URL}`)
         .then(response => response.json())
         .then(nes => {
-            console.log(nes);
-        });
+            for (let i = 0; i < nes.length; i++) {
+                const newCard = document.createElement('div');
+                newCard.classList.add('card');
+                newCard.appendChild(divClass);
+                console.log(JSON.stringify(nes[i]));
+            }
 
-    // cardBody.innerHTML = <h1> PUCCHIACCA </h1>;
+            // nes.forEach(nes => {
+
+            // });
+            console.log(JSON.stringify(nes));
+        });
 
 }
 
@@ -52,15 +60,17 @@ form.addEventListener('submit', (event) => {
                 body: schema
             })
             .then(function (res) {
+                getAllNes();
                 form.style.display = '';
                 loadingGif.style.display = 'none';
                 return res.json();
             })
             .then(function (data) {
+                form.style.display = '';
+                loadingGif.style.display = 'none';
                 console.log(JSON.stringify(data))
             })
         console.log(schema);
-        getAllNes();
     } else {
         alert('Please insert the name or the message! Thanks')
     }
